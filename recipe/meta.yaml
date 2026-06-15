@@ -11,6 +11,7 @@ source:
   sha256: e227d54e91eb1ac808af1a86340b61feaf4a25707bb0a9ff0d1d5ce9822e4a02
   patches:
     - 510.patch
+    - unvendor-spatialgeometry.patch
 
 build:
   number: 0
@@ -26,9 +27,12 @@ requirements:
     - cython                                 # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
   host:
+    - cmake
+    - ninja
     - pip
     - python
     - numpy
+    - scikit-build-core
     - setuptools
   run:
     - ansitable
@@ -39,9 +43,9 @@ requirements:
     - qpsolvers
     - rtb-data
     - scipy
-    - spatialmath-python >=1.0.0
-    - swift-sim >=1.0.0
     - spatialgeometry >=1.0.0
+    - spatialmath-python >=1.1.16
+    - swift-sim >=1.0.0
     - sympy
     - bullet >=3.21
     - imageio
@@ -51,7 +55,7 @@ requirements:
     - pyyaml
     - progress
     - cryptography
-    - colored <1.5.0
+    - colored >2.0.0
     - jupyter
 
 test:
