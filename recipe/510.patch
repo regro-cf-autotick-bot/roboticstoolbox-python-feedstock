@@ -19,10 +19,10 @@ Signed-off-by: Lidang-Jiang <lidangjiang@gmail.com>
  tests/test_IK.py            | 70 +++++++++++++++++++++++++++++++++++++
  2 files changed, 71 insertions(+), 1 deletion(-)
 
-diff --git a/roboticstoolbox/robot/IK.py b/roboticstoolbox/robot/IK.py
-index f784158b6..5d350f5f9 100644
---- a/roboticstoolbox/robot/IK.py
-+++ b/roboticstoolbox/robot/IK.py
+diff --git a/src/roboticstoolbox/robot/IK.py b/src/roboticstoolbox/robot/IK.py
+index f784158b..5d350f5f 100644
+--- a/src/roboticstoolbox/robot/IK.py
++++ b/src/roboticstoolbox/robot/IK.py
 @@ -569,7 +569,7 @@ def _calc_qnull(
          qnull_grad += (1.0 / λm * Jm).flatten()
  
